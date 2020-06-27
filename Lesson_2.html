@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Task 1 -->
+<!-- 1. Дан код:
+var a = 1, b = 1, c, d;
+c = ++a; alert(c);           // 2
+d = b++; alert(d);           // 1
+c = (2+ ++a); alert(c);      // 5
+d = (2+ b++); alert(d);      // 4
+alert(a);                    // 3
+alert(b);                    // 3
+Почему код даёт именно такие результаты? -->
+
+<script>
+    var a = 1,
+        b = 1,
+        c, d;
+    c = ++a;
+    alert(c); // 2 - результат увеличения переменной a на 1 и вывод alert
+    d = b++;
+    alert(d);
+    /* 1 - сначала происходит присвоение переменной d значения из b и вывод alert,
+                                 а потом увеличение ее на 1 */
+    c = (2 + ++a);
+    alert(c); // 5 - результат суммы 2 + 3, в первом примере переменная a была увеличена на 1 (3)
+    d = (2 + b++);
+    alert(d); // 4 - результат суммы 2 + 2, во втором примере переменная b была увеличена на 1 (2)
+    alert(a); // 3 - переменная a была увеличена на 1 в 1 и 3 примерах
+    alert(b); // 3 - переменная b была увеличена на 1 в 2 и 4 примерах
+
+</script>
+
+<!-- Task 2 -->
+<!-- 2. Чему будет равен x в примере ниже?
+var a = 2;
+var x = 1 + (a *= 2); -->
+
+<script>
+    var a = 2;
+    var x = 1 + (a *= 2); // 5
+
+</script>
+
+<!-- Task 3 -->
+<!-- 3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт,
+который работает по следующему принципу:
+если a и b положительные, вывести их разность;
+если а и b отрицательные, вывести их произведение;
+если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом. -->
+
+<script>
+    a = 5;
+    b = 14;
+    if (a > 0 && b > 0) {
+        alert(a - b);
+    } else if (a < 0 && b < 0) {
+        alert(a * b);
+    }
+
+</script>
+
+<!-- Task 4 -->
+<!-- 4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15. -->
+
+<script>
+    minNumber = +prompt("Введите значение от 0 до 15");
+    switch (minNumber) {
+        case 0:
+            document.write(0 + "<br>");
+        case 1:
+            document.write(1 + "<br>");
+        case 2:
+            document.write(2 + "<br>");
+        case 3:
+            document.write(3 + "<br>");
+        case 4:
+            document.write(4 + "<br>");
+        case 5:
+            document.write(5 + "<br>");
+        case 6:
+            document.write(6 + "<br>");
+        case 7:
+            document.write(7 + "<br>");
+        case 8:
+            document.write(8 + "<br>");
+        case 9:
+            document.write(9 + "<br>");
+        case 10:
+            document.write(10 + "<br>");
+        case 11:
+            document.write(11 + "<br>");
+        case 12:
+            document.write(12 + "<br>");
+        case 13:
+            document.write(13 + "<br>");
+        case 14:
+            document.write(14 + "<br>");
+        case 15:
+            document.write(15 + "<br>");
+
+    }
+</script>
+
+<!-- Task 5 -->
+<!-- 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать
+оператор return. -->
+
+<script>
+    function add(arg1, arg2) {
+        return arg1 + arg2;
+    }
+
+    function sub(arg1, arg2) {
+        return arg1 - arg2;
+    }
+
+    function multiplic(arg1, arg2) {
+        return arg1 * arg2;
+    }
+
+    function div(arg1, arg2) {
+        return arg1 / arg2;
+    }
+
+    add(6, 3);
+    sub(6, 3);
+    multiplic(6, 3);
+    div(6, 3);
+</script>
+
+<!-- Task 5 -->
+<!-- 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 –
+значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить
+одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать
+switch). -->
+
+<script>
+    number1 = +prompt("Введите 1 значение:");
+    number2 = +prompt("Введите 2 значение:");
+    operation = prompt("Введите знак операции (+, -, *, /):")
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case "+":
+                alert(add(arg1, arg2));
+                break;
+            case "-":
+                alert(sub(arg1, arg2));
+                break;
+            case "*":
+                alert(multiplic(arg1, arg2));
+                break;
+            case "/":
+                alert(div(arg1, arg2));
+                break;
+        }
+
+    }
+
+    mathOperation(number1, number2, operation)
+</script>
+
+</body>
+</html>
