@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100. */
+        document.write("<h4>Задача №1</h4>")
+        var max = 100,
+            i = 0;
+
+        while (i < 100) {
+            var n = 0;
+            for (var j = 2; j <= i; j++) {
+                if (i % j) {
+                    continue;
+                }
+                n += 1;
+            }
+            if (n == 1) document.write(i + " ");
+            i++;
+        }
+        
+        document.write("<hr>")
+        
+        /*  2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины.
+            Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
+            3. Товары в корзине хранятся в массиве. Задачи:
+            a) Организовать такой массив для хранения товаров в корзине;
+            b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины. */
+        document.write("<h4>Задача №2-3</h4>")
+
+        var goods = [
+            {
+                title: "Товар 1",
+                price: 100,
+                count: 17
+            },
+            {
+                title: "Товар 2",
+                price: 200,
+                count: 3
+            },
+            {
+                title: "Товар 3",
+                price: 300,
+                count: 9
+            },
+        ];
+
+        for(var item of goods){
+            document.write(item.title+" стоимостью "+item.price+"р. (Кол-во: "+item.count+")<br>");
+        }
+
+        function sum(mas){
+            var s = 0;
+            for(var item of mas){
+                s += item.price;
+            }
+            return s;
+        }
+
+        function countBasketPrice(mas){
+            var s = 0;
+            for(var item of mas){
+                s += item.price * item.count;
+            }
+            return s;
+        }
+
+        document.write("Сумма единичных товаров корзины = "+sum(goods)+"р.<br>");
+        document.write("Общая сумма товаров корзины = "+countBasketPrice(goods)+"р.");
+        
+        document.write("<hr>")
+        
+        /* 4.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так: for(…){// здесь пусто} */
+        document.write("<h4>Задача №4</h4>")
+        
+        for(var i = 0; i <= 9; document.write(i++ +" ")) {};
+        
+        document.write("<hr>")
+        
+        /* 5. *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не       5:
+              x
+              xx
+              xxx
+              xxxx
+              xxxxx */
+        
+        var str = "";
+        for(var i = 0; i <= 20; i++) {
+            str += "x";
+            console.log(str);
+        }
+        
+    </script>
+</body></html>
