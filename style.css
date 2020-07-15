@@ -163,7 +163,6 @@ textarea {
 }
 
 .button_buy {
-    width: 120px;
     height: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -248,7 +247,7 @@ label {
 }
 
 .submenu {
-    top: 40px;
+    top: 35px;
     position: absolute;
     left: 0;
     z-index: 1000;
@@ -271,16 +270,18 @@ label {
 }
 
 .pr_1 {
-    float: left;
-    width: 30%;
     text-align: center;
     margin: 1% 1.66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .pr {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-flow: wrap;
 }
 
 .footer {
@@ -304,18 +305,18 @@ hr {
 }
 
 @media screen and (max-width: 750px) {
-    
+
     .pr_1 {
-      width: 45%;
-    margin: 2% 2.5%;  
+        width: 45%;
+        margin: 2% 2.5%;
     }
-    
+
 }
+
 .shop_items {
     width: 700px;
     margin: 0 auto;
     padding-top: 20px;
-    margin-bottom: 30px;
 }
 
 .shop_item {
@@ -327,16 +328,79 @@ hr {
     border-collapse: collapse;
     text-align: center;
 }
-#shop_items tr, td:first-child {
+
+#shop_items tr > td:first-child {
     background: #4b4b4b;
     color: white;
     padding: 10px 20px;
 }
-#shop_items tr, td {
+
+#shop_items tr > td {
     border-style: solid;
     border-width: 0 1px 1px 0;
     border-color: #ffffff;
 }
-#shop_items td {
+
+#shop_items {
     background: #656565;
+}
+
+.result {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#result {
+    margin: 0 auto;
+    width: 100px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.product {
+    margin: 0 auto;
+}
+
+#snake-field{
+    display: inline-block;
+}
+#snake-renew,#snake-start{
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    margin-right: 10px;
+}
+.game-table{
+    border-collapse: separate;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    height: 461px;
+}
+td.game-table-cell{
+    width: 20px;
+    border: 2px solid rgb(88, 108, 124);
+    border-radius: 20%;
+}
+.snake-unit{
+    background-color: rgb(88, 108, 124);
+    transition: background-color .15s;
+}
+.food-unit{
+    background-color: rgb(67, 129, 180);
+    transition: background-color .4s;
+}
+.bomb-unit {
+    background-color: rgb(180, 67, 67);
+    transition: background-color 1s;
+}
+
+.buttons{
+    display: inline-block;
+    margin: 20px 0 20px 0;
+}
+.wrap{
+    margin: 30px auto 0;
+    text-align: center;
 }
