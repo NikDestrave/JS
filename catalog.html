@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo_div">
+            <a class="link_logo" href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+        </div>
+        <div class="header">
+            <nav class="one">
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#">Каталог</a>
+                        <ul class="submenu">
+                            <a class="submenu_items" href="catalog/product_1.html">Schecter Demon-7</a>
+                            <a class="submenu_items" href="catalog/product_2.html">Schecter OMEN-8</a>
+                            <a class="submenu_items" href="catalog/product_3.html">Schecter C-5 BASS SGR</a>
+                        </ul>
+                    </li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+        <h1 style="text-align: center">Каталог</h1>
+        <div id="big_img">
+
+        </div>
+        <div class="pr">
+            <div class="pr_1">
+                <a href="#"><img class="product" id="DEMON_2.png" src="img/DEMON_2.png" height="500" alt="product_1"></a><br>
+                <span id="x1" data-id="32000">Schecter Demon-7</span><br>
+                <input type="button" class="button_buy" id="1" data-id="shop_item_1" value="Купить">
+            </div>
+            <div class="pr_1">
+                <a href="#"><img class="product" id="img3" src="img/OMEN-8_2.png" height="500" alt="product_2"></a><br>
+                <span id="x2" data-id="24000">Schecter OMEN-8</span><br>
+                <input type="button" class="button_buy" id="2" data-id="shop_item_2" value="Купить">
+            </div>
+            <div class="pr_1">
+                <a href="#"><img class="product" id="img3" src="img/C-5%20SGR_2.png" height="500" alt="product_3"></a><br>
+                <span id="x3" data-id="15000" >Schecter C-5 BASS SGR</span><br>
+                <input type="button" class="button_buy" id="3" data-id="shop_item_3_1" value="Купить">
+            </div>
+        </div>
+        <table id="shop_items" class="shop_items">
+            <tr>
+                <td>№</td>
+                <td>Товар</td>
+                <td>Количество</td>
+                <td>Стоимость</td>
+            </tr>
+        </table>
+        <hr>
+        <div class="clr"></div>
+    </div>
+        <div class="footer">
+            <p>
+                Все права защищены &copy; 2020
+                <a href="index.html" target="_blank">Nik Destrave</a>
+            </p>
+        </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
