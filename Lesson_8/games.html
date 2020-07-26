@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="snake.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo_div">
+            <a class="link_logo" href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+        </div>
+        <div class="header">
+            <nav class="one">
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a>
+                        <ul class="submenu">
+                            <a class="submenu_items" href="catalog/product_1.html">Schecter Demon-7</a>
+                            <a class="submenu_items" href="catalog/product_2.html">Schecter OMEN-8</a>
+                            <a class="submenu_items" href="catalog/product_3.html">Schecter C-5 BASS SGR</a>
+                        </ul>
+                    </li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="#">Игры</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrap">
+            <div id="snake-field"></div>
+            <div class="buttons">
+                <input type="button" class="button_buy buy_2" id="snake-start" value="Старт">
+                <input type="button" class="button_buy buy_2" id="snake-renew" value="Новая игра">
+            </div>
+            <div class="count">
+                Ваш счет: 
+                <span id = "count_id">
+                    0
+                </span>
+                 очков
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <p>
+                Все права защищены &copy; 2020
+                <a href="index.html" target="_blank">Nik Destrave</a>
+            </p>
+        </div>
+</body>
+
+</html>
